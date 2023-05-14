@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/numpy/numpy git:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-amethyst-tang.sh
-        container: qc.acc_ugly-cornflower-peccary
+        - /usr/bin/env sh .sqa/script.chewy-indigo-dragon.sh
+        container: qc.acc_thirsty-corn-harrier
   QC.Doc:
     repos:
       github.com/numpy/numpy find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-peach-sparrow.sh
-        container: qc.doc_skinny-smalt-magpie
+        - /usr/bin/env sh .sqa/script.flabby-heliotrope-chin.sh
+        container: qc.doc_slaphappy-violet-snail
       github.com/numpy/numpy git:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-ochre-corgi.sh
-        container: qc.doc_randy-brass-owl
+        - /usr/bin/env sh .sqa/script.muzzy-jade-dhole.sh
+        container: qc.doc_sunny-orchid-orangutan
       github.com/numpy/numpy markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-orchid-macaw.sh
-        container: qc.doc_boozy-goldenrod-bloodhound
+        - /usr/bin/env sh .sqa/script.ugly-silver-chipmunk.sh
+        container: qc.doc_woolly-buff-spider
       github.com/numpy/numpy restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-viridian-flamingo.sh
-        container: qc.doc_cozy-myrtle-civet
+        - /usr/bin/env sh .sqa/script.scummy-xanthic-zebra.sh
+        container: qc.doc_shaggy-cardinal-booby
   QC.Lic:
     repos:
       github.com/numpy/numpy licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-cream-falcon.sh
-        container: qc.lic_sunny-grey-fish
+        - /usr/bin/env sh .sqa/script.tasty-gamboge-binturong.sh
+        container: qc.lic_snippy-ruby-booby
   QC.Sec:
     repos:
       github.com/numpy/numpy bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-peach-balinese.sh
-        container: qc.sec_squirrely-black-grasshopper
+        - /usr/bin/env sh .sqa/script.snippy-malachite-beaver.sh
+        container: qc.sec_wiggy-thistle-chamois
   QC.Sty:
     repos:
       github.com/numpy/numpy flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-black-salamander.sh
-        container: qc.sty_cozy-violet-husky
+        - /usr/bin/env sh .sqa/script.cranky-magenta-deer.sh
+        container: qc.sty_nippy-gamboge-wrasse
       github.com/numpy/numpy jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-russet-sheep.sh
-        container: qc.sty_flabby-orchid-booby
+        - /usr/bin/env sh .sqa/script.tasty-aqua-echidna.sh
+        container: qc.sty_slaphappy-asparagus-wolfhound
   QC.Ver:
     repos:
       github.com/numpy/numpy get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-vermilion-worm.sh
-        container: qc.ver_droopy-smalt-anteater
+        - /usr/bin/env sh .sqa/script.woozy-tangerine-snake.sh
+        container: qc.ver_greasy-sangria-toad
 timeout: 5400
