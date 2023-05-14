@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.10
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/numpy/numpy:
+      branch: main
+      repo: https://github.com/numpy/numpy
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/numpy/numpy git:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-amethyst-tang.sh
+        container: qc.acc_ugly-cornflower-peccary
+  QC.Doc:
+    repos:
+      github.com/numpy/numpy find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-peach-sparrow.sh
+        container: qc.doc_skinny-smalt-magpie
+      github.com/numpy/numpy git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-ochre-corgi.sh
+        container: qc.doc_randy-brass-owl
+      github.com/numpy/numpy markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-orchid-macaw.sh
+        container: qc.doc_boozy-goldenrod-bloodhound
+      github.com/numpy/numpy restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-viridian-flamingo.sh
+        container: qc.doc_cozy-myrtle-civet
+  QC.Lic:
+    repos:
+      github.com/numpy/numpy licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-cream-falcon.sh
+        container: qc.lic_sunny-grey-fish
+  QC.Sec:
+    repos:
+      github.com/numpy/numpy bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-peach-balinese.sh
+        container: qc.sec_squirrely-black-grasshopper
+  QC.Sty:
+    repos:
+      github.com/numpy/numpy flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-black-salamander.sh
+        container: qc.sty_cozy-violet-husky
+      github.com/numpy/numpy jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-russet-sheep.sh
+        container: qc.sty_flabby-orchid-booby
+  QC.Ver:
+    repos:
+      github.com/numpy/numpy get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-vermilion-worm.sh
+        container: qc.ver_droopy-smalt-anteater
+timeout: 5400
